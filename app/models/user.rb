@@ -21,4 +21,8 @@ class User < ApplicationRecord
     end
 end
 
+  def is_staff
+    return is_staff
+  end
+
 end
