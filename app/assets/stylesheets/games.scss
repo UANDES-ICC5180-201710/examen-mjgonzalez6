@@ -1,0 +1,15 @@
+// Place all the styles related to the Games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
++.isActive {
++    background-color: $primary-success
++}
++.notActive{
++    background-color: grey;
++}
++.isActive:hover{
++      background-color: #669999;
++}
++.notActive:hover{
++      background-color: #666633;
++}
