@@ -14,7 +14,7 @@ class PurchasesController < ApplicationController
 
   def generatePurchases
     game_id = params[:game_id]
-    user_id = current_purchaser.id
+    user_id = current_user.id
     @purchase = Purchase.new@purchase.game_id = game_id
     @purchase.user_id = user_id
     @purchase.save
@@ -22,8 +22,8 @@ class PurchasesController < ApplicationController
 
   def removePurchase
    game_id = params[:game_id]
-   user_id = current_purchaser.id
-   @purchase = current_purchaser.purchases.where('game_id = ?', "#{game_id}").first
+   user_id = current_user.id
+   @purchase = current_user.purchases.where('game_id = ?', "#{game_id}").first
    Interest.destroy(@interest.id)
   end
 

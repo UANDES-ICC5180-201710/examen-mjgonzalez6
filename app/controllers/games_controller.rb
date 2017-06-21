@@ -6,8 +6,8 @@ class GamesController < ApplicationController
   def index
     @games = Game.all
 
-    puts current_user.purchases
-    @current_user = current_purchaser
+
+    @current_user = current_user
   end
 
   # GET /games/1
